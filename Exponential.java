@@ -14,14 +14,14 @@ public class Exponential{
 
 	public static void main(String[] args){
 		double delta = Double.parseDouble(args[0]);
-		int length = String.valueOf(delta).length
+		long length = String.valueOf(delta).length();
 		double e = 0;
 		int i = 0;
-		System.out.println(factorial(2));
+		System.out.println(length);
 		while ((1.0/factorial(i))>delta){
-			e +=(1.0/factorial(i));
+			e += (1.0/factorial(i));
 			i++;
 			}
-		System.out.printf("%.*f%n",length,e);
+		System.out.printf(String.format("%."+(length-1)+"f%n",e));
 	}
 }
